@@ -4,14 +4,19 @@ public class Main {
     
     public static void main(String[] args) {
         StringCalculator calculator = new StringCalculator();
-        System.out.println(calculator.add(""));
-        System.out.println(calculator.add("1"));
-        System.out.println(calculator.add("14"));
-        System.out.println(calculator.add("14,8"));
-        System.out.println(calculator.add("14,8,2,9,0"));
-        System.out.println(calculator.add("14;6"));
-        System.out.println(calculator.add("14\n7"));
-        System.out.println(calculator.add("14|4"));
-        System.out.println(calculator.add("13++4++4"));
+        try {
+            System.out.println(calculator.add(""));
+            System.out.println(calculator.add("1"));
+            System.out.println(calculator.add("14"));
+            System.out.println(calculator.add("14,8"));
+            System.out.println(calculator.add("14,8,2,9,0"));
+            System.out.println(calculator.add("14;6"));
+            System.out.println(calculator.add("14\n7"));
+            System.out.println(calculator.add("14|4"));
+            System.out.println(calculator.add("13++4++4"));
+            System.out.println(calculator.add("-334&6&-4&-11"));
+        } catch (Exception e) {
+            System.err.println(e.getMessage());
+        }
     }
 }
