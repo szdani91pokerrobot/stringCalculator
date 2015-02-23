@@ -8,8 +8,10 @@ public class StringCalculator {
         if(splitNumbers.length == 1) {
             return Integer.parseInt(splitNumbers[0]);
         }
-        int firstNumber = Integer.parseInt(splitNumbers[0]);
-        int secondNumber = Integer.parseInt(splitNumbers[1]);
-        return firstNumber + secondNumber;
+        int sum = 0;
+        for (String number : splitNumbers) {
+            sum += Integer.parseInt(number);
+        }
+        return sum;
     }
 }
